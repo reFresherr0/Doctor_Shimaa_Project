@@ -1,0 +1,14 @@
+{% load hitcount_tags %}
+{% block content %}
+ <h2>{{object.english_title}}</h2>
+ <ul>
+ <p class=>{{object.title}}</p>
+ <p>Published: {{object.publish_time}}</p>
+ <p>Views: {% get_hit_count for object %}</p>
+ <p>Counted: {{ hitcount.hit_counted }}</p>
+ <p>Message: {{ hitcount.hit_message }}</p>
+ <p>Content: {{ object.content }}</p>
+
+
+</ul>
+{% endblock %}
